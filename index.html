@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/288289805d.js" crossorigin="anonymous"></script>
+    <link rel="icon"  type="image/svg+xml" href="assets/calculator-solid.svg">
+    <link rel="icon" type="image/png" href="assets/icon.png">  <!--Alternative icon for older browsers-->
+</head>
+
+<body>
+    <div id="top" style="margin: 0; padding: 0; top: 0px;"></div>
+    <div class="container">
+        <h2>BMI calculator</h2>
+        <form id="bmiForm">
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="height-feet">Height:</label>
+            <input type="number" id="height-feet" required placeholder="Feet">
+            <input type="number" id="height-inches" required placeholder="Inches">
+            <label for="weight">Weight</label>
+            <input type="number" required id="weight" placeholder="Enter weight in Kilograms">
+            <input type="submit" value="Calculate BMI" class="calculate">
+        </form>
+        <div id="result"></div>
+    </div>
+    <div id="info">
+        <h1>BMI Introduction</h1>
+        <p>
+            BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended
+            to
+            quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight
+            for
+            their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a
+            person is underweight, normal weight, overweight, or obese depending on what range the value falls between.
+            These ranges of BMI vary based on factors such as region and age. Being overweight or underweight can have
+            significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful
+            indicator of whether any additional testing or action is required.
+        </p>
+        <h1>Who is BMI for?</h1>
+        <p>The BMI calculator applies to most adults 18-65 years old. <strong>It is less accurate for:</strong></p>
+        <ul>
+            <li>Muscle Builders</li>
+            <li>Long-distance athletes</li>
+            <li>Pregnant individuals</li>
+            <li>Elderly populations</li>
+            <li>Young children</li>
+            <li>People with a physical disability</li>
+            <li>People of certain ethnicities</li>
+        </ul>
+        <h1>Why?</h1>
+        <p>BMI does not take into account whether your weight is muscle or fat. People with a higher muscle mass, such
+            as athletes, may have a high BMI but do not have a greater health risk. Those with a lower muscle mass, such
+            as children who have not completed their growth, or older people, who might be losing some muscle mass, may
+            have a lower BMI. During pregnancy and lactation, body composition changes, so using BMI is not appropriate.
+        </p>
+    </div>
+    <table>
+        <tr>
+            <th>Classification</th>
+            <th>BMI Category (kg/m<sup>2</sup>)</th>
+            <th>Risk of developing health problems</th>
+        </tr>
+        <tr>
+            <td>Underweight</td>
+            <td>&lt;18.5</td>
+            <td>Increased</td>
+        </tr>
+        <tr>
+            <td>Normal weight</td>
+            <td>18.5 - 24.9</td>
+            <td>Least</td>
+        </tr>
+        <tr>
+            <td>Overweight</td>
+            <td>25.0 - 29.9</td>
+            <td>Increased</td>
+        </tr>
+        <tr>
+            <td>Obese class I</td>
+            <td>30.0 - 34.9</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Obese class II</td>
+            <td>35.0 - 39.9</td>
+            <td>Very high</td>
+        </tr>
+        <tr>
+            <td>Obese class III</td>
+            <td>&gt;=40.0</td>
+            <td>Extremely high</td>
+        </tr>
+    </table>
+    <h4 id="tableinfo">Health risk classification according to Body Mass Index(BMI)</h4>
+    <a href="#top" id="backtotop" class="hide"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="js/script.js"></script>
+    <script>
+        const backtotop = document.getElementById('backtotop');
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backtotop.classList.remove("hide");
+                backtotop.classList.add("show");
+            } else {
+                backtotop.classList.remove("show");
+                backtotop.classList.add("hide");
+
+            }
+        });
+    </script>
+</body>
+
+</html>
